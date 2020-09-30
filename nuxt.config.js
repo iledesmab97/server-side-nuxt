@@ -30,6 +30,7 @@ export default {
   },
   serverMiddleware: [
     { path: '/api', handler: '~/api/index.js'},
+    { path: '/graphql', handler: '~/api/graphql.js'},
   ],
   /*
   ** Global CSS
