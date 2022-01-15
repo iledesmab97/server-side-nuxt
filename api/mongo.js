@@ -1,5 +1,5 @@
-import { MongoClient } from 'mongodb';
+// import { MongoClient } from 'mongodb';
 
-const client = new MongoClient(process.env.MONGODB_URI || "mongodb://localhost", { useUnifiedTopology: true });
+// const client = new MongoClient(process.env.MONGODB_URI || "mongodb://localhost", { useUnifiedTopology: true });
 
-export default client;
+// export default 'client';

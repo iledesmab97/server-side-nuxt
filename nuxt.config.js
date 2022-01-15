@@ -57,9 +57,9 @@ export default {
   /*
   ** Nuxt.js modules
   */
-  modules: [
-    '~/modules/mongodb-setup.js'
-  ],
+  // modules: [
+  //   '~/modules/mongodb-setup.js'
+  // ],
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/

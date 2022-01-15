@@ -1,8 +1,8 @@
 import { graphqlHTTP } from 'express-graphql';
 import { buildSchema } from 'graphql';
-import mongo from './mongo';
-import {ObjectID} from 'mongodb';
-const messagesCollection = mongo.db('test').collection('messsages');
+// import mongo from './mongo';
+// import {ObjectID} from 'mongodb';
+// const messagesCollection = mongo.db('test').collection('messsages');
 
 var schema = buildSchema(`
   type Query {
@@ -17,30 +17,30 @@ var schema = buildSchema(`
 
 var root = {
     async getMessage({id}) {
-        let result = await messagesCollection.findOne({
-            _id: new ObjectID(id)
-        });
+        // let result = await messagesCollection.findOne({
+        //     _id: new ObjectID(id)
+        // });
 
-        return result.message;
+        return 'result.message';
     },
     async createMessage({msg}){
-        let newDoc = {
-            message: msg
-        };
-        await messagesCollection.insertOne(newDoc);
-        return newDoc._id;
+        // let newDoc = {
+        //     message: msg
+        // };
+        // await messagesCollection.insertOne(newDoc);
+        return 'newDoc._id';
     },
     async updateMessage({id, msg}) {
 
-        let result = await messagesCollection.findOneAndUpdate({
-            _id: new ObjectID(id)
-        }, {
-            $set: {
-                message: msg
-            }
-        });
+        // let result = await messagesCollection.findOneAndUpdate({
+        //     _id: new ObjectID(id)
+        // }, {
+        //     $set: {
+        //         message: msg
+        //     }
+        // });
 
-        return id;
+        return 'id';
     }
   };
 
