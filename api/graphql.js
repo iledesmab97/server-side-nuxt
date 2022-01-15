@@ -6,7 +6,7 @@ const messagesCollection = mongo.db('test').collection('messsages');
 
 var schema = buildSchema(`
   type Query {
-    getMessage(id: ID!): String
+    getMessage(id: ID!): String!
   }
 
   type Mutation {
